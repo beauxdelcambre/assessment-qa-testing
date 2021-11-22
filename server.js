@@ -98,8 +98,8 @@ app.post("/post", (req, res) => {
     console.log(req.body)
     
     rollbar.info("Post request attempted");
-    db('NAMES')
-    .insert(name)
+    db('BOTS')
+    .insert(bots)
     .then(id => res.status(200).json(id))
     .catch(err => {
         console.log(err);
